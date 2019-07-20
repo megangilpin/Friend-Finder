@@ -214,7 +214,22 @@
       </div>
     </div>
   </section>
-
+  <footer class="footer mt-4">
+    <div class="container">
+      <a href ="/api/friends">API Friend List</a>
+    </div>
+  </footer>
 </body>
 
+<script type="text/javascript">
+  $(".submit").on("click", function(event){
+    event.preventDefault();
+    
+    var newFriend = {
+      name: $("#userName").val().trim(),
+      photo: $("#userPhoto").val().trim(),
+    }
+  })
+</script>
+  
 </html>
