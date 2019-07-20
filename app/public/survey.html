@@ -48,7 +48,7 @@
               <div class="col-2">
                 <div class="form-group">
                   <label for="q1">1. Your mind is always buzzing with unexplored ideas and plans.</label>
-                    <select class="col- 3 custom-select">
+                    <select id="q1" class="col- 3 custom-select">
                       <option selected>Select a value -- </option>
                       <option value="1">1 (Strongly Disagree)</option>
                       <option value="2">2</option>
@@ -64,7 +64,7 @@
               <div class="col-2">
                 <div class="form-group">
                   <label for="q2">2. Generally speaking, you rely more on your experience than your imagination.</label>
-                  <select class="col- 3 custom-select">
+                  <select id="q2" class="col- 3 custom-select">
                     <option selected>Select a value -- </option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
@@ -80,7 +80,7 @@
               <div class="col-2">
                 <div class="form-group">
                   <label for="q3">3. You find it easy to stay relaxed and focused even when there is some pressure.</label>
-                  <select class="col- 3 custom-select">
+                  <select id="q3" class="col- 3 custom-select">
                     <option selected>Select a value -- </option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
@@ -96,7 +96,7 @@
               <div class="col-2">
                 <div class="form-group">
                   <label for="q4">4. You rarely do something just out of sheer curiosity.</label>
-                  <select class="col- 3 custom-select">
+                  <select id="q4" class="col- 3 custom-select">
                     <option selected>Select a value -- </option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
@@ -112,7 +112,7 @@
               <div class="col-2">
                 <div class="form-group">
                   <label for="q5">5. People can rarely upset you.</label>
-                  <select class="col- 3 custom-select">
+                  <select id="q5" class="col- 3 custom-select">
                     <option selected>Select a value -- </option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
@@ -128,7 +128,7 @@
               <div class="col-2">
                 <div class="form-group">
                   <label for="q6">6. It is often difficult for you to relate to other people’s feelings.</label>
-                  <select class="col- 3 custom-select">
+                  <select id="q6" class="col- 3 custom-select">
                     <option selected>Select a value -- </option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
@@ -144,7 +144,7 @@
               <div class="col-2">
                 <div class="form-group">
                   <label for="q7">7. In a discussion, truth should be more important than people’s sensitivities.</label>
-                  <select class="col- 3 custom-select">
+                  <select id="q7" class="col- 3 custom-select">
                     <option selected>Select a value -- </option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
@@ -160,7 +160,7 @@
               <div class="col-2">
                 <div class="form-group">
                   <label for="q8">8. You rarely get carried away by fantasies and ideas.</label>
-                  <select class="col- 3 custom-select">
+                  <select id="q8" class="col- 3 custom-select">
                     <option selected>Select a value -- </option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
@@ -176,7 +176,7 @@
               <div class="col-2">
                 <div class="form-group">
                   <label for="q9">9. You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</label>
-                  <select class="col- 3 custom-select">
+                  <select id="q9" class="col- 3 custom-select">
                     <option selected>Select a value -- </option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
@@ -192,7 +192,7 @@
               <div class="col-2">
                 <div class="form-group">
                   <label for="q10">10. You feel more energetic after spending time with a group of people.</label>
-                  <select class="col- 3 custom-select">
+                  <select id="q10" class="col- 3 custom-select">
                     <option selected>Select a value -- </option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
@@ -204,7 +204,7 @@
               </div>
             </div>
 
-            <button type="submit" class="mt-1 btn btn-primary">Submit</button>
+            <button id="submit" type="submit" class="mt-1 btn btn-primary">Submit</button>
           </form>
           <!-- End of survey form -->
 
@@ -222,14 +222,30 @@
 </body>
 
 <script type="text/javascript">
-  $(".submit").on("click", function(event){
+
+  $("#submit").on("click", function(event){
     event.preventDefault();
-    
+    console.log("button was clicked")
+
     var newFriend = {
       name: $("#userName").val().trim(),
       photo: $("#userPhoto").val().trim(),
-    }
+      scores: [
+        $("#q1 :selected").val(),
+        $("#q2 :selected").val(),
+        $("#q3 :selected").val(),
+        $("#q4 :selected").val(),
+        $("#q5 :selected").val(),
+        $("#q6 :selected").val(),
+        $("#q7 :selected").val(),
+        $("#q8 :selected").val(),
+        $("#q9 :selected").val(),
+        $("#q10 :selected").val(),
+    ]
+  }
+    $.post("/api/friends", newFriend)
   })
+  
 </script>
   
 </html>
