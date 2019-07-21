@@ -102,41 +102,42 @@ var user = [
 ]
 
 function compareArray(arr1, arr2) {
+  console.log(arr1)
   var compatScore = [];
   var compatTotal = 0
   for (var i = 0; i < arr1.length; i++) {
     compatScore.push(Math.abs(arr1[i] - arr2[i]));
   }
-  console.log(compatScore)
+  // console.log("compat score Array: " + compatScore)
   for (var i = 0; i < compatScore.length; i++) {
     compatTotal += compatScore[i]
   }
-  console.log(compatTotal)
+  console.log("compat Total: " + compatTotal)
   return (compatTotal)
 }
 
-function compareFriends(user){
-  var scoreArray = userScores(friendArray);
-  var userScore = user[0].scores;
-  var compatScores = [];
-  // compares all users scores with current user return the difference in compatibility
-  
-
-  
+function compareFriends(arr1, arr2){
+  var scoreArray = userScores(arr1);
+  var userScore = arr2[0].scores;
   console.log(scoreArray)
-  console.log(userScore)
+  console.log("user score: " + userScore)
+  var compatScores = [];
+  scoreArray.forEach(element => {
+    compatScores.push(compareArray(element, userScore))
+  });
+  console.log(compatScores)
 }
 
 function userScores(array){
   var scoreArray = [];
-  for (i = 0; i < array.length; i++) {
+  for (var i = 0; i < array.length; i++) {
     scoreArray.push(array[i].scores)
   }
   return(scoreArray)
 }
 
 
-compareArray(friendArray[0].scores, user[0].scores)
+compareFriends(friendArray, user)
 
 // compareFriends(user);
 
