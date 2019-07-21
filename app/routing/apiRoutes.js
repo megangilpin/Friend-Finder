@@ -11,4 +11,8 @@ module.exports = function(app) {
     friendsData.push(req.body)
   })
 
+  app.get("/api/compatibleFriend", function (req, res) {
+    for
+  });
+
 }; 

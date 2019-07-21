@@ -17,7 +17,7 @@ var friendArray =[
   },
    {
     name: "Steven",
-     photo: "https://picsum.photos/id/1012/3973/2639",
+    photo: "https://picsum.photos/id/1012/3973/2639",
     scores: [
       5,
       2,
@@ -82,5 +82,62 @@ var friendArray =[
 ]
 
 
+var user = [
+  {
+    name: "Charlie",
+    photo: "https://picsum.photos/id/117/1544/1024",
+    scores: [
+      2,
+      5,
+      3,
+      1,
+      1,
+      4,
+      3,
+      1,
+      2,
+      1
+    ]
+  }
+]
 
-module.exports = friendArray;
+function compareArray(arr1, arr2) {
+  var compatScore = [];
+  var compatTotal = 0
+  for (var i = 0; i < arr1.length; i++) {
+    compatScore.push(Math.abs(arr1[i] - arr2[i]));
+  }
+  console.log(compatScore)
+  for (var i = 0; i < compatScore.length; i++) {
+    compatTotal += compatScore[i]
+  }
+  console.log(compatTotal)
+  return (compatTotal)
+}
+
+function compareFriends(user){
+  var scoreArray = userScores(friendArray);
+  var userScore = user[0].scores;
+  var compatScores = [];
+  // compares all users scores with current user return the difference in compatibility
+  
+
+  
+  console.log(scoreArray)
+  console.log(userScore)
+}
+
+function userScores(array){
+  var scoreArray = [];
+  for (i = 0; i < array.length; i++) {
+    scoreArray.push(array[i].scores)
+  }
+  return(scoreArray)
+}
+
+
+compareArray(friendArray[0].scores, user[0].scores)
+
+// compareFriends(user);
+
+// module.exports = friendArray;

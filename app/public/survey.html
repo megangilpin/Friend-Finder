@@ -231,7 +231,7 @@
       name: $("#userName").val().trim(),
       photo: $("#userPhoto").val().trim(),
       scores: [
-        $("#q1 :selected").val(),
+        $("#q1").val(0),
         $("#q2 :selected").val(),
         $("#q3 :selected").val(),
         $("#q4 :selected").val(),
@@ -244,6 +244,19 @@
     ]
   }
     $.post("/api/friends", newFriend)
+
+    $("#userName").val(""),
+    $("#userPhoto").val(""),
+    $("#q1 :selected").val(""),
+    $("#q2 :selected").val(""),
+    $("#q3 :selected").val(""),
+    $("#q4 :selected").val(""),
+    $("#q5 :selected").val(""),
+    $("#q6 :selected").val(""),
+    $("#q7 :selected").val(""),
+    $("#q8 :selected").val(""),
+    $("#q9 :selected").val(""),
+    $("#q10 :selected").val("")
   })
   
 </script>
