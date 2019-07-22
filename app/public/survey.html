@@ -7,19 +7,45 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>FriendFinder - Survey</title>
 
-  <!-- Latest compiled and minified CSS & JS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-    integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-    crossorigin="anonymous"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
-
 <body>
 
+  <!-- Modal -->
+  <div class="modal fade" id="bestFriend" tabindex="-1" role="dialog" aria-labelledby="bestFriend"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of Modal -->
+  
   <section class="container ≈">
     <div class="row">
       <div class="column">
@@ -45,10 +71,10 @@
             </div>
             <!-- Question one -->
             <div class="row">
-              <div class="col-2">
+              <div class="col-8">
                 <div class="form-group">
                   <label for="q1">1. Your mind is always buzzing with unexplored ideas and plans.</label>
-                    <select id="q1" class="col- 3 custom-select">
+                    <select id="q1" class="col-4 custom-select">
                       <option selected>Select a value -- </option>
                       <option value="1">1 (Strongly Disagree)</option>
                       <option value="2">2</option>
@@ -61,10 +87,10 @@
             </div>
             <!-- Question two -->
             <div class="row">
-              <div class="col-2">
+              <div class="col-8">
                 <div class="form-group">
                   <label for="q2">2. Generally speaking, you rely more on your experience than your imagination.</label>
-                  <select id="q2" class="col- 3 custom-select">
+                  <select id="q2" class="col-4 custom-select">
                     <option selected>Select a value -- </option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
@@ -77,10 +103,10 @@
             </div>
             <!-- Question three -->
             <div class="row">
-              <div class="col-2">
+              <div class="col-8">
                 <div class="form-group">
                   <label for="q3">3. You find it easy to stay relaxed and focused even when there is some pressure.</label>
-                  <select id="q3" class="col- 3 custom-select">
+                  <select id="q3" class="col-4 custom-select">
                     <option selected>Select a value -- </option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
@@ -93,10 +119,10 @@
             </div>
             <!-- Question four -->
             <div class="row">
-              <div class="col-2">
+              <div class="col-8">
                 <div class="form-group">
                   <label for="q4">4. You rarely do something just out of sheer curiosity.</label>
-                  <select id="q4" class="col- 3 custom-select">
+                  <select id="q4" class="col-4 custom-select">
                     <option selected>Select a value -- </option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
@@ -109,10 +135,10 @@
             </div>
             <!-- Question five -->
             <div class="row">
-              <div class="col-2">
+              <div class="col-8">
                 <div class="form-group">
                   <label for="q5">5. People can rarely upset you.</label>
-                  <select id="q5" class="col- 3 custom-select">
+                  <select id="q5" class="col-4 custom-select">
                     <option selected>Select a value -- </option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
@@ -125,10 +151,10 @@
             </div>
             <!-- Question six -->
             <div class="row">
-              <div class="col-2">
+              <div class="col-8">
                 <div class="form-group">
                   <label for="q6">6. It is often difficult for you to relate to other people’s feelings.</label>
-                  <select id="q6" class="col- 3 custom-select">
+                  <select id="q6" class="col-4 custom-select">
                     <option selected>Select a value -- </option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
@@ -141,10 +167,10 @@
             </div>
             <!-- Question seven -->
             <div class="row">
-              <div class="col-2">
+              <div class="col-8">
                 <div class="form-group">
                   <label for="q7">7. In a discussion, truth should be more important than people’s sensitivities.</label>
-                  <select id="q7" class="col- 3 custom-select">
+                  <select id="q7" class="col-4 custom-select">
                     <option selected>Select a value -- </option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
@@ -157,10 +183,10 @@
             </div>
             <!-- Question eight -->
             <div class="row">
-              <div class="col-2">
+              <div class="col-8">
                 <div class="form-group">
                   <label for="q8">8. You rarely get carried away by fantasies and ideas.</label>
-                  <select id="q8" class="col- 3 custom-select">
+                  <select id="q8" class="col-4 custom-select">
                     <option selected>Select a value -- </option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
@@ -173,10 +199,10 @@
             </div>
             <!-- Question nine -->
             <div class="row">
-              <div class="col-2">
+              <div class="col-8">
                 <div class="form-group">
                   <label for="q9">9. You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</label>
-                  <select id="q9" class="col- 3 custom-select">
+                  <select id="q9" class="col-4 custom-select">
                     <option selected>Select a value -- </option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
@@ -189,11 +215,11 @@
             </div>
             <!-- Question ten -->
             <div class="row">
-              <div class="col-2">
+              <div class="col-8">
                 <div class="form-group">
                   <label for="q10">10. You feel more energetic after spending time with a group of people.</label>
-                  <select id="q10" class="col- 3 custom-select">
-                    <option selected>Select a value -- </option>
+                  <select id="q10" class="col-4 custom-select">
+                    <option selected value="0">Select a value -- </option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -204,7 +230,7 @@
               </div>
             </div>
 
-            <button id="submit" type="submit" class="mt-1 btn btn-primary">Submit</button>
+            <button id="submit" type="submit" class="mt-1 btn btn-primary" data-toggle="modal" data-target="#bestFriend">Submit</button>
           </form>
           <!-- End of survey form -->
 
@@ -214,6 +240,7 @@
       </div>
     </div>
   </section>
+  
   <footer class="footer mt-4">
     <div class="container">
       <a href ="/api/friends">API Friend List</a>
@@ -256,7 +283,7 @@
     $("#q7 :selected").val(""),
     $("#q8 :selected").val(""),
     $("#q9 :selected").val(""),
-    $("#q10 :selected").val("")
+    $("#q10 :selected").val(0)
   })
   
 </script>

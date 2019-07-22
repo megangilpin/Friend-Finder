@@ -12,7 +12,8 @@ module.exports = function(app) {
     var intScores = currentUser.scores.map(parseFloat)
     currentUser.scores = intScores
     console.log(currentUser)
-    
+    alert("You've got a new friend!")
+    compareFriends(friendArray, currentUser)
     friendArray.push(currentUser)
   })
 }; 
@@ -46,15 +47,14 @@ function compareFriends(arr1, arr2) {
   // All users scores
   var scoreArray = userScores(arr1);
   // Current user
-  var userScore = arr2[0].scores;
+  var userScore = arr2.scores;
   console.log(scoreArray)
-  console.log("user score: " + userScore)
   var compatScores = [];
   // Compares each users scores with the current users scores to find each total difference between the current user and all other 
   scoreArray.forEach(element => {
     compatScores.push(compareArray(element, userScore))
+    console.log("user #" + element + compatScores)
   });
-  console.log(compatScores)
   // finds the index of the lowest compatible score totals
   var bestFriend = compatScores.indexOf(Math.min(...compatScores))
   console.log(friendArray[bestFriend])
