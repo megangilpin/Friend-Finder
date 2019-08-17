@@ -30,8 +30,8 @@ Orgnaize the directories to be as below:
 1. Create a friends.js data file with the following:
     1. An array that will store the following user ("friends") information:
        - name
-       -url of their photo
-       -user's survey scores
+       - url of their photo
+       - user's survey scores
     1. Functions that handle the comparison logic that will do the following:  
        -compare the difference between current user's scores against those from other users, question by question. Adds up the differences to calculate the totalDifference and ensures there will be no negative solutions. The closest match will be the user with the least amount of difference and the current users future friend!
 
