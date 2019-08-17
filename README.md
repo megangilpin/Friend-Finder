@@ -33,7 +33,7 @@ Orgnaize the directories to be as below:
        - url of their photo
        - user's survey scores
     1. Functions that handle the comparison logic that will do the following:  
-       -compare the difference between current user's scores against those from other users, question by question. Adds up the differences to calculate the totalDifference and ensures there will be no negative solutions. The closest match will be the user with the least amount of difference and the current users future friend!
+       - compare the difference between current user's scores against those from other users, question by question. Adds up the differences to calculate the totalDifference and ensures there will be no negative solutions. The closest match will be the user with the least amount of difference and the current users future friend!
 
         Example:
 
@@ -43,7 +43,6 @@ Orgnaize the directories to be as below:
 
        Total Difference: 2 + 1 + 2 = 5
 
-The closest match will be the user with the least amount of difference.
 1. Set up the apiRoutes.js file to require the path and comparison functions from the friends.js file along with the following api routes:
     1. Get route "/api/friends" -  Displays the JSON of the all the potential friends on the app
     1. Post route "/api/friends" - handles incoming survey results then does the following:
