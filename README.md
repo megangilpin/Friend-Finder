@@ -7,6 +7,13 @@ Compatibility-based "FriendFinder" application --  a dating app for a friend.
 ## Functionality Breakdown
 This **full-stack site** takes in results from users' surveys, then compares their answers with those from other users. The app will then display the name and picture of the user with the best overall match.
 
+## Technology Used
+- NPM Express
+- NPM Patch
+- Bootstrap
+- HTML
+- Node.js
+
 ## Technical Approach
 Orgnaize the directories to be as below:
  - .gitignore
