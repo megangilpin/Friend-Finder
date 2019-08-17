@@ -11,8 +11,9 @@ This **full-stack site** takes in results from users' surveys, then compares the
 - NPM Express
 - NPM Patch
 - Bootstrap
-- HTML
 - Node.js
+- JavaScript
+- JQuery
 
 ## Technical Approach
 Orgnaize the directories to be as below:
