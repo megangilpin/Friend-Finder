@@ -55,7 +55,7 @@ Orgnaize the directories to be as below:
 
 1. Set up the apiRoutes.js file to require the path and comparison functions from the friends.js file along with the following api routes:
     1. Get route "/api/friends" -  Displays the JSON of the all the potential friends on the app
-    1. Post route "/api/friends" - handles incoming survey results then does the following:
+    1. Post route "/api/friends" - Handles incoming survey results then does the following:
        - changes user's score from strings into integers and stores them in an array
        - calls comparison functions
        - sends result back to be displayed in the modal
