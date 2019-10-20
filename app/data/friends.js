@@ -113,7 +113,7 @@ function userScores(array) {
 
 // Compares two users' scores then finds the total of the difference between each score
 function compareArray(arr1, arr2) {
-  console.log(arr1)
+  // console.log(arr1)
   var compatScore = [];
   var compatTotal = 0
   for (var i = 0; i < arr1.length; i++) {
@@ -123,7 +123,7 @@ function compareArray(arr1, arr2) {
   for (var i = 0; i < compatScore.length; i++) {
     compatTotal += compatScore[i]
   }
-  console.log("compat Total: " + compatTotal)
+  // console.log("compat Total: " + compatTotal)
   return (compatTotal)
 }
 
@@ -133,17 +133,17 @@ function compareFriends(arr1, arr2){
   var scoreArray = userScores(arr1);
   // Current user
   var userScore = arr2.scores;
-  console.log(scoreArray)
-  console.log("user score: " + userScore)
+  // console.log(scoreArray)
+  // console.log("user score: " + userScore)
   var compatScores = [];
   // Compares each users scores with each current users scores to find the total of the difference between each score
   scoreArray.forEach(element => {
     compatScores.push(compareArray(element, userScore))
   });
-  console.log(compatScores)
+  // console.log(compatScores)
   // finds the index of the lowest compatible score totals
   var bestFriend = compatScores.indexOf(Math.min(...compatScores))
-  console.log(bestFriend)
+  // console.log(bestFriend)
   return friendArray[bestFriend]
 }
 

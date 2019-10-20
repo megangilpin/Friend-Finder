@@ -13,7 +13,7 @@ module.exports = function(app) {
     var intScores = currentUser.scores.map(parseFloat)
     // Replaces the scores array with the above array
     currentUser.scores = intScores
-    console.log(currentUser)
+    // console.log(currentUser)
     //Compares the new user and current users' scores to find their compatibilities -- see all logic on the friends.js file
     res.json(friends.compare(friends.array, currentUser))
     // adds the new user to the friends Array
