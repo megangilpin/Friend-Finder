@@ -273,7 +273,7 @@
       ]
     }
     // checks if the form was complete
-    if (newFriend.name === "" || newFriend.photo === "" || newFriend.includes("0")){
+    if (newFriend.name === "" || newFriend.photo === ""){
       $("#friendName").append("Please fill out the full survey in order to find your one true Forever Friend");
       var pbjImage = 'https://chocolatevent.files.wordpress.com/2017/10/pbj.png';
       $("#friendPhoto").attr('src', pbjImage)
