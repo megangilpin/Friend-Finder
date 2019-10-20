@@ -2,12 +2,16 @@
 
  https://secure-citadel-28458.herokuapp.com/
 
+  ![Friend Finder Demo](demo/friendFindermed.gif)
+
 ## Overview
 
 Compatibility-based "FriendFinder" application --  a dating app for a friend.
 
 ## Functionality Breakdown
 This **full-stack site** takes in results from users' surveys, then compares their answers with those from other users. The app will then display the name and picture of the user with the best overall match.
+
+Fill out the form by entering your name, pasting a url to your picture, and selecting the value that most applies to you from the drop down menu. Then hit the submit button and meet your new best friend!
 
 ## Technology Used
 - Express.js
